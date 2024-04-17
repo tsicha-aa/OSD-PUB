@@ -18,9 +18,11 @@ if ((Get-MyComputerManufacturer -Brief) -eq 'Dell') {
 	$msgBoxInput =  [System.Windows.MessageBox]::Show('Update Dell Bios Settings?','BIOS Settings','YesNoCancel','Question')
 	switch  ($msgBoxInput) {
 		'Yes' {
+			Write-Verbose "Download Dell CCTK and Bios-Settings File"
 			Save-WebFile -SourceUrl $GitRawPath/BIOS/$DellCCTK.zip -DestinationDirectory "$env:temp"
 			Expand-Archive "$env:temp\$DellCCTK.zip" -DestinationPath "$env:temp\$DellCCTK" -Force
 			Save-WebFile -SourceUrl $GitRawPath/BIOS/Bios-Settings.cctk -DestinationDirectory "$env:temp"
+			Write-Verbose "Changing Dell-Bios Settings:"
 			&"$env:temp\$DellCCTK\cctk.exe" -i "$env:temp\$DellBiosSettingsFile"
 		}
 	}
