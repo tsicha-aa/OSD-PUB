@@ -7,6 +7,7 @@ $OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
 $OSDModuleResource.StartOSDCloudGUI.WindowsUpdate=$true
 $OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
 $OSDModuleResource.StartOSDCloudGUI.WindowsUpdateDrivers=$true
+$OSDModuleResource.StartOSDCloudGUI.ClearDiskConfirm=$false
 Start-OSDCloudGUI -Brand "Anita Services GmbH"
 
 #wpeutil reboot
