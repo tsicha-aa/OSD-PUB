@@ -11,6 +11,7 @@ $OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
 $OSDModuleResource.StartOSDCloudGUI.WindowsUpdate=$true
 $OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
 $OSDModuleResource.StartOSDCloudGUI.WindowsUpdateDrivers=$true
+$OSDModuleResource.StartOSDCloudGUI.ClearDiskConfirm=$false
 
 if ((Get-MyComputerManufacturer -Brief) -eq 'Dell') {
 	Add-Type -AssemblyName PresentationFramework
@@ -20,8 +21,7 @@ if ((Get-MyComputerManufacturer -Brief) -eq 'Dell') {
 			Save-WebFile -SourceUrl $GitRawPath/BIOS/$DellCCTK.zip -DestinationDirectory "$env:temp"
 			Expand-Archive "$env:temp\$DellCCTK.zip" -DestinationPath "$env:temp\$DellCCTK"
 			Save-WebFile -SourceUrl $GitRawPath/BIOS/Bios-Settings.cctk -DestinationDirectory "$env:temp"
-			#&"$env:temp\$DellCCTK\cctk.exe" -i "$env:temp\$DellBiosSettingsFile"
-			&"$env:temp\$DellCCTK\cctk.exe" --help
+			&"$env:temp\$DellCCTK\cctk.exe" -i "$env:temp\$DellBiosSettingsFile"
 		}
 	}
 }
