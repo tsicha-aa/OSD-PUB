@@ -57,12 +57,3 @@ if ((Get-MyComputerManufacturer -Brief) -eq 'Dell') {
 }
 
 Start-OSDCloudGUI -Brand "Anita Services GmbH"
-
-#wpeutil reboot
-
-
-
-Start-OSDCloudGUI -Brand "Anita Services GmbH"
-
-#wpeutil reboot
-
