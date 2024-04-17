@@ -1,0 +1,11 @@
+[cctk]
+AttemptLegacyBoot=disabled
+EmbSataRaid=raid
+Fastboot=thorough
+LegacyOrom=disabled
+SecureBoot=enabled
+TpmActivation=activate
+TpmPpiDpo=enabled
+TpmPpiPo=enabled
+TpmSecurity=enabled
+UefiNwStack=enabled
