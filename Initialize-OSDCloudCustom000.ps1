@@ -1,10 +1,10 @@
 Import-Module OSD -Force
 
-$GitRawPath=https://raw.githubusercontent.com/tsicha-aa/OSD-PUB/main
+$GitRawPath="https://raw.githubusercontent.com/tsicha-aa/OSD-PUB/main"
 $DellCCTK="DellCCTK4.1"
 $DellBiosSettingsFile="Bios-Settings.cctk"
 
-$OSDModuleResource.OSDCloud.Values.Language="de-de","en-us","fr-fr"
+$OSDModuleResource.OSDCloud.Values.Language="de-de","en-us"
 $OSDModuleResource.OSDCloud.Default.Language="de-de"
 $OSDModuleResource.OSDCloud.Values.Edition="Enterprise","Pro"
 $OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
@@ -29,3 +29,4 @@ if ((Get-MyComputerManufacturer -Brief) -eq 'Dell') {
 Start-OSDCloudGUI -Brand "Anita Services GmbH"
 
 #wpeutil reboot
+
