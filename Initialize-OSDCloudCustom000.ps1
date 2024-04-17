@@ -43,7 +43,7 @@ $OSDModuleResource.StartOSDCloudGUI.ClearDiskConfirm=$false
 
 if ((Get-MyComputerManufacturer -Brief) -eq 'Dell') {
 	Add-Type -AssemblyName PresentationFramework
-	$msgBoxInput =  [System.Windows.MessageBox]::Show('Update Dell Bios Settings?','BIOS Settings','YesNoCancel','Question')
+	$msgBoxInput =  [System.Windows.MessageBox]::Show('Update Dell Bios Settings?','BIOS Settings','YesNo','Question')
 	switch  ($msgBoxInput) {
 		'Yes' {
 			Write-Host -ForegroundColor Yellow "Download Dell CCTK and Bios-Settings File"
