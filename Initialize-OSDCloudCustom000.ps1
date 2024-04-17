@@ -19,7 +19,7 @@ if ((Get-MyComputerManufacturer -Brief) -eq 'Dell') {
 	switch  ($msgBoxInput) {
 		'Yes' {
 			Save-WebFile -SourceUrl $GitRawPath/BIOS/$DellCCTK.zip -DestinationDirectory "$env:temp"
-			Expand-Archive "$env:temp\$DellCCTK.zip" -DestinationPath "$env:temp\$DellCCTK"
+			Expand-Archive "$env:temp\$DellCCTK.zip" -DestinationPath "$env:temp\$DellCCTK" -Force
 			Save-WebFile -SourceUrl $GitRawPath/BIOS/Bios-Settings.cctk -DestinationDirectory "$env:temp"
 			&"$env:temp\$DellCCTK\cctk.exe" -i "$env:temp\$DellBiosSettingsFile"
 		}
