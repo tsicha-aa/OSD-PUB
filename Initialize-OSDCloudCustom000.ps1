@@ -6,8 +6,13 @@ $DellBiosSettingsFile="Bios-Settings.cctk"
 $OSDModuleResource.OSDCloud.Values.Edition="Enterprise","Pro"
 $OSDModuleResource.OSDCloud.Values.Language="en-us","de-de","cs-cz","nl-nl","fr-fr","it-it","pl-pl","pt-pt","es-es","th-th"
 $OSDModuleResource.OSDCloud.Default.Language="de-de"
+
+#Following Section must match with ImageIndex (e.g. Pro Volume = 8, Pro Retail = 9, Enterprise = 6)
 $OSDModuleResource.OSDCloud.Default.Edition="Pro"
-#$OSDModuleResource.OSDCloud.Default.Activation="Retail"
+$OSDModuleResource.OSDCloud.Default.Activation="Retail"
+$OSDModuleResource.OSDCloud.Default.ImageIndex="9"
+#End Section
+
 $OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
 $OSDModuleResource.StartOSDCloudGUI.WindowsUpdate=$true
 $OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
