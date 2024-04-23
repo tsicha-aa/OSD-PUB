@@ -3,12 +3,11 @@ Import-Module OSD -Force
 $GitRawPath="https://raw.githubusercontent.com/tsicha-aa/OSD-PUB/main"
 $DellCCTK="DellCCTK4.1"
 $DellBiosSettingsFile="Bios-Settings.cctk"
-
+$OSDModuleResource.OSDCloud.Values.Edition="Enterprise","Pro"
 $OSDModuleResource.OSDCloud.Values.Language="en-us","de-de","cs-cz","nl-nl","fr-fr","it-it","pl-pl","pt-pt","es-es","th-th"
 $OSDModuleResource.OSDCloud.Default.Language="de-de"
-$OSDModuleResource.OSDCloud.Values.Edition="Enterprise","Pro"
 $OSDModuleResource.OSDCloud.Default.Edition="Pro"
-$OSDModuleResource.OSDCloud.Default.Activation="Retail"
+#$OSDModuleResource.OSDCloud.Default.Activation="Retail"
 $OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
 $OSDModuleResource.StartOSDCloudGUI.WindowsUpdate=$true
 $OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
