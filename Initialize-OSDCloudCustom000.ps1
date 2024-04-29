@@ -15,7 +15,6 @@ $OSDModuleResource.OSDCloud.Default.ImageIndex="9"
 
 $OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
 $OSDModuleResource.StartOSDCloudGUI.WindowsUpdate=$true
-$OSDModuleResource.StartOSDCloudGUI.updateFirmware=$true
 $OSDModuleResource.StartOSDCloudGUI.WindowsUpdateDrivers=$true
 $OSDModuleResource.StartOSDCloudGUI.ClearDiskConfirm=$false
 
